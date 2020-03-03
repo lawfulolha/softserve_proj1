@@ -1,0 +1,49 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="contenthome">
+ <div  id="searchform">
+  <div class="search-div">
+    <form id="search-form" class="search-form" name="searchform" [formGroup]="searchForm" (ngSubmit)="findByTags()">
+
+
+        <mat-form-field class="search-bar" id="searchbar">
+          <mat-label>Search by technologies...</mat-label>
+           <input matInput type="text" formControlName="searchQuery" placeholder="Ex. JavaScript ..." >
+          <span matSuffix>&nbsp;<mat-icon>search</mat-icon></span>
+
+        </mat-form-field>
+
+    </form>
+</div>
+ </div>
+
+<div class="column" id="jobs">
+<div class="jobs-list">
+  <div *ngIf="this.jobs">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false"
+                         *ngFor="let job of jobs; let i = index">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <div class="col-head">
+            <h2>{{job.title}}</h2>
+            <p>{{job.technologies}}</p>
+          </div>
+          <div class="col-salary">
+            <h4 *ngIf="job.salary!=undefined">Salary:<br> ${{job.salary}}</h4>
+            <h6>{{job.updatedAt.substring(0, 10)}}</h6>
+          </div>
+        </mat-panel-title>
+        <mat-panel-description>
+
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="description">
+      <p>{{job.description}}</p></div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,55 @@
+body{
+  background: rgba(0,0,0,0);
+}
+.add-job-form div{
+  width: 25em;
+  min-width: 50%;
+  background-color: #eeeeee;
+}
+.add-job-form{
+  width: 25em;
+  min-width: 50%;
+  background-color: #eeeeee;
+  border-radius: 0.5em;
+  padding: 4em;
+  text-align: center;
+}
+.add-job-form button{
+  width: 50%;
+  height: 40%;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #1976d2;
+  font-weight: bold;
+  color: #e6ebf1;
+  margin: 0.5em;
+}
+#add-j{
+  margin-left: auto;
+}
+.mat-form-field{
+
+  border-radius: 0.5em;
+  width: 25em;
+  min-width: 30%;
+}
+
+.mat-form-field-flex {
+
+}
+.add-job-form button:hover{
+  background-color: #125699;
+}
+.add-job-form h1{
+
+  margin-bottom: 0.7em;
+  color: #125699;
+}
+.add-job-form.redir{
+  font-weight: lighter;
+}
+
+.mat-typography{
+  margin: 0;
+}

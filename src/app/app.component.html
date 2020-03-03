@@ -1,0 +1,46 @@
+<div class="sticky">
+<mat-toolbar>
+  <mat-toolbar-row>
+    <mat-icon>computer</mat-icon>
+<!--    <span>Work in IT</span>-->
+    <div class="rolesboard">
+      <div *ngIf="showAdminBoard">
+<p>Admin</p>
+      </div>
+      <div *ngIf="showModeratorBoard">
+
+      </div>
+      <div class="authorization">
+        &nbsp;
+      <div c *ngIf="isLoggedIn">
+        <a href="/user" class="nav-link" routerLink="/user">{{ username }}</a>
+        <a href class="nav-link" (click)="logout()">Log Out</a>
+      </div>
+      <div *ngIf="!isLoggedIn">
+        <a href="/login" class="nav-link" routerLink="/login">Login</a>
+        <a href="/register" class="nav-link" routerLink="/register">Register</a>
+      </div>
+    </div>
+    </div>
+
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+          <a href="/home" class="nav-link" routerLink="/home">Home</a>
+<div class="add-job-link">
+    <a *ngIf="!isLoggedIn" href="/login" class="nav-link" routerLink="/login" >Add a job</a>
+
+         <a *ngIf="isLoggedIn" href="/add" class="nav-link" routerLink="/add">Add a job</a>
+</div>
+  </mat-toolbar-row>
+</mat-toolbar>
+</div>
+
+<div class="content" role="main">
+    <router-outlet></router-outlet>
+  </div>
+  <footer>
+
+      <a href="https://github.com/lawfulolha/jobsite" target="_blank" rel="noopener">See this project on GitHub</a>
+    <img id="skyscraper" src="https://images.pexels.com/photos/1029614/pexels-photo-1029614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+ </footer>

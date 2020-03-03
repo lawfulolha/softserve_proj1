@@ -1,0 +1,29 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="auth-form">
+  <h1 class="mat-display-1">Login</h1>
+<form
+  *ngIf="!isLoggedIn"  name="form" [formGroup]="loginForm"
+  (ngSubmit)="onSubmit()">
+
+
+    <mat-form-field class="form-full-width">
+      <mat-label>E-mail</mat-label>
+      <input
+        #email matInput formControlName="useremail"
+             placeholder="Ex. my@email.com">
+    </mat-form-field>
+
+    <mat-error *ngIf = "isControlInvalid('useremail')">Please enter a valid e-mail</mat-error>
+
+    <mat-form-field class="form-full-width">
+      <mat-label>Password</mat-label>
+      <input matInput #password formControlName="userpassword"
+             type="password"  placeholder="******">
+      <mat-error *ngIf = "isControlInvalid('userpassword') && loginForm.controls['userpassword'].value.toString().length<6">Password cannot be less than 6 characters</mat-error>
+
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary">Login</button>
+ </form>
+  <p>Don't have an account?</p><a href="/register" routerLink="/register">Register</a>
+</div>

@@ -1,0 +1,102 @@
+.search-bar,.search-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.search-full-width {
+  width: 100%;
+}
+.search-form{
+  background-color: #eeeeee;
+  text-align: center;
+}
+.mat-expansion-panel-body {
+  padding: 0 74px 16px;
+  border-bottom: 1em solid lightblue;
+}
+mat-expansion-panel-body {
+  padding: 0 74px 16px;
+  border-bottom: 1em solid lightblue;
+}
+body{
+  background: url('https://images.pexels.com/photos/34578/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');}
+.mat-expansion-panel
+{
+  padding: 0;
+ margin: 0em;
+}
+
+.mat-expansion-panel-header
+{
+  padding: 3em;
+}
+.sticky-search {
+  width: 100%;
+}
+.search-div{
+  display: inline-flex;
+  width: 50%;
+  align-content: center;
+  margin-bottom: 1em;
+}
+.row {
+  display: block;
+  width: 100%;
+}
+#jobs{
+  display: block;
+}
+.contenthome{
+  margin-top: 40px;
+  display: inline-flex;
+}
+#searchbar{
+  width: 100%;
+  background-color: #eeeeee;
+}
+#searchform{
+  margin: 2em;
+  width: 50%;
+  display: inline;
+}
+.search-bar{
+  padding: 2em;
+}
+.search-bar input{
+  margin: 0em;
+}
+mat-panel-title{
+  padding: 2em;
+  width: 100%;
+  margin: 0;
+}
+.col-head{
+  text-align: left;
+  width: 60%;
+  float: left;
+  display: inline-block;
+}
+.col-salary{
+  align-items: center;
+  text-align: right;
+  float: right;
+  display: block;
+  width: 29%;
+  padding: 0;
+  margin: 0;
+}
+.col-salary h4{
+  text-align: right;
+  float: right;
+  display: block;
+  margin: 0 0 0 3em;
+}
+.description{
+  margin: 0 0 2em 1em;
+  text-align: left;
+  padding-left: 2.5em;
+
+  padding-right: 15em;
+}
+

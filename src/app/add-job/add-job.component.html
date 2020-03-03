@@ -1,0 +1,39 @@
+<div class="add-job-form">
+  <h1 class="mat-display-1" id="add-j">Add a Job Advertisement</h1>
+  <form   name="add-job-form" [formGroup]="jobForm"
+    (ngSubmit)="onSubmit()" autocomplete="off">
+
+      <mat-form-field class="form-full-width">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title"
+               placeholder="Ex. Front-End Developer...">
+        <mat-error *ngIf = "isControlInvalid('title')">Please add a title</mat-error>
+      </mat-form-field>
+<br>
+      <mat-form-field class="form-full-width">
+        <mat-label>Technologies</mat-label>
+        <input  matInput formControlName="technologies"
+                placeholder="Ex. JavaScript, Angular,...">
+        <mat-error *ngIf = "isControlInvalid('technologies')">Please add at least one technology</mat-error>
+      </mat-form-field>
+    <br>
+      <mat-form-field class="form-full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput  formControlName="description"
+                  type="text"  placeholder="We are looking for a..."></textarea>
+        <mat-error *ngIf = "isControlInvalid('description')">Please add the description</mat-error>
+      </mat-form-field>
+    <br>
+      <mat-form-field class="form-full-width">
+        <mat-label>Salary</mat-label>
+        <input type="number" matInput formControlName="salary"
+                placeholder="Leave blank for unknown...">
+      </mat-form-field>
+    <br>
+    <button mat-raised-button type="submit" color="primary">Submit</button>
+
+  </form>
+  <div class="redir">
+  <p><a href="/home" routerLink="/home">Go back to homepage</a></p>
+  </div>
+</div>

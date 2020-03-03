@@ -1,0 +1,38 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="auth-form">
+  <h1 class="mat-display-1">Register</h1>
+<form
+  *ngIf="!isLoggedIn"  name="register-form" [formGroup]="registerForm"
+  (ngSubmit)="onSubmit()">
+  <!--#RegisterForm="ngForm"-->
+  <!--&gt;-->
+    <mat-form-field class="form-full-width">
+      <mat-label>Username</mat-label>
+      <input matInput  formControlName="username"
+             placeholder="Ex. Ben Afflek...">
+      <mat-error *ngIf = "isControlInvalid('username')">Username is required</mat-error>
+    </mat-form-field>
+
+     <mat-form-field class="form-full-width">
+      <mat-label>E-mail</mat-label>
+      <input   matInput formControlName="useremail"
+             placeholder="Ex. my@email.com">
+      <mat-error *ngIf = "isControlInvalid('useremail')">Please enter a valid e-mail</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-full-width">
+      <mat-label>Password</mat-label>
+      <input matInput   formControlName="userpassword"
+             type="password"  placeholder="******">
+      <mat-error *ngIf = "isControlInvalid('userpassword')">Password is required</mat-error>
+
+    </mat-form-field>
+
+  <p>
+    <button mat-raised-button [disabled]="isValid" type="submit" color="primary">Register</button>
+  </p>
+</form>
+  <div class="redir">
+<p>Do you have an account already?</p><a href="/login" routerLink="/login">Login</a>
+  </div>
+</div>

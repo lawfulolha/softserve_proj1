@@ -1,0 +1,45 @@
+body{
+  background: url('https://images.pexels.com/photos/34578/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+}
+.auth-form{
+  background-color: #eeeeee;
+  border-radius: 0.5em;
+  padding: 4em;
+
+  width: 40%;
+  min-width: 20%;
+}
+.auth-form input, .auth-form textarea{
+  width: 100%;
+}
+.auth-form button{
+  max-width: 60%;
+  height: 40%;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #1976d2;
+  font-weight: bold;
+  color: #e6ebf1;
+  margin: 0.5em;
+}
+
+.auth-form button:hover{
+  background-color: #125699;
+}
+.auth-form h1{
+  margin-bottom: 0.7em;
+  color: #125699;
+}
+
+.auth-form.redir{
+  font-weight: lighter;
+  font-size: 40%;
+}
+.mat-typography{
+  margin: 0;
+}
+.form-full-width{
+  display: block;
+  width: 70%;
+}
